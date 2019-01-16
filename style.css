@@ -56,6 +56,9 @@ rect, polygon {
   transform: translateY(-167.3%) scale(5.3);
 }
 
+#lady {
+  transform: translate(55%, -25%) scale(2);
+}
 .white-panel {
   /* width: 175px;
   height: 110px; */
