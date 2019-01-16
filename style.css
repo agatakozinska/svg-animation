@@ -1,0 +1,63 @@
+@keyframes sunset {
+  0% { background: linear-gradient(0deg, rgba(220,123,132,1) 0%, rgba(46,151,183,1) 0%) no-repeat;
+    background-size: cover;}
+  50% { background: linear-gradient(0deg, rgba(220,123,132,1) 5%, rgba(46,151,183,1) 50%) no-repeat;
+    background-size: cover;}
+  55% {background: linear-gradient(0deg, rgba(220,123,132,1) 15%, rgba(46,151,183,1) 70%) no-repeat;
+    background-size: cover;
+}
+  60% {background: linear-gradient(0deg, rgba(220,123,132,1) 25%, rgba(46,151,183,1) 100%) no-repeat;
+    background-size: cover;
+}
+  65% {background: linear-gradient(0deg, rgba(220,123,132,1) 33%, rgba(46,151,183,1) 100%) no-repeat;
+    background-size: cover;
+}
+  100% {background: linear-gradient(0deg, rgba(220,123,132,1) 43%, rgba(46,151,183,1) 100%) no-repeat;
+    background-size: cover;}
+}
+
+body {
+  animation: sunset 7s ease-in 1s forwards ;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.svg_container, svg {
+  height: 100%;
+  width: 100%; 
+  display: block;
+}
+
+rect, polygon {
+  width: 100%;
+}
+
+.floor {
+  transform-origin: bottom left;
+  transform: translateY(82%);
+}
+
+.water {
+  transform-origin: bottom left;
+  transform: translateY(65.5%);
+}
+
+/* .test {
+  width: 175px;
+  height: 110px;
+  -webkit-clip-path: polygon(100% 0, 100% 34%, 35% 100%, 0% 100%);
+  clip-path: polygon(100% 0, 100% 34%, 35% 100%, 0% 100%);
+  background-image: radial-gradient(circle at bottom left, rgba(4,125,164,1) 20%, rgba(65,145,176,1) 55%, rgba(87,146,176,1) 80%, rgba(177,169,190,1) 100%)
+} */
+
+.floor-edge {
+  transform: translateY(-167.3%) scale(5.3);
+}
+
+.white-panel {
+  /* width: 175px;
+  height: 110px; */
+  fill: #FEF0E7;
+}
