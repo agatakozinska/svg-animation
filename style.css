@@ -51,23 +51,40 @@
     transform: scale(2.80,-2.4) translate(-10px,142px);
   }
   40% {fill-opacity: .8;
-    transform: scale(2.50,-2.3) translate(-10px,137px);
+    transform: scale(2.60,-2.3) translate(-10px,137px);
   }
   60% {fill-opacity: .7;
-    transform: scale(2.20,-2.2) translate(-10px,132px);
+    transform: scale(2.40,-2.2) translate(-10px,132px);
   }
   70% {fill-opacity: .5;
-    transform: scale(2.0,-2.1) translate(-10px,125px);
+    transform: scale(2.2,-2.1) translate(-10px,125px);
   }
   80% {fill-opacity: .2;
-    transform: scale(1.80,-2.1) translate(-10px,125px);
+    transform: scale(2.0,-2.0) translate(-10px,125px);
   }
   100% {fill-opacity: 0;
+    transform: scale(1.0,-2.0) translate(-10px, 125px);
+  }
+}
+
+@keyframes swing {
+  0% {
+    transform: translate(0px,62px) scale(0.8) rotate(33deg);
+  }
+  10% {
+    transform: translate(0px,30px) scale(0.8) rotate(33deg);
+  }
+
+
+
+
+  100% {
+    transform: translate(0px,1px) scale(1) rotate(0deg);
   }
 }
 
 body {
-  animation: sunset 10s ease-in 1s forwards ;
+  animation: sunset 12s ease-in 1s forwards ;
   background-repeat: no-repeat;
   margin: 0;
   height: 100%;
@@ -110,26 +127,22 @@ rect, polygon {
   fill: #FEF0E7;
 }
 
-#lady {
+#lady, #sun-animation, #swing-animation {
   transform: translate(55%, -17%) scale(1.85);
-}
-
-.body {
-  fill: var(--body-color);
 }
 
 .arm-right {
   fill: url(#body-gradient);
-  transform: translateY(-0.4px);
-
+  transform-origin: 80px 340px;
+  transform: translate(0px,62px) scale(0.8) rotate(33deg);
+  animation: swing 5s ease 10s forwards;
+  /* display: none; */
 }
 
-.bra-left, .bra-right {
-  fill: var(--blue-color);
-}
-
-.hair {
-  fill: var(--hair-color);
+.hat {
+  transform-origin: 80px 340px;
+  transform: translate(0px,105px) scale(0.8) rotate(33deg);
+  animation: swing 5s ease 10s forwards;
   /* display: none; */
 }
 
@@ -140,15 +153,34 @@ rect, polygon {
 
 .hat-sun {
   fill: url(#red-gradient);
+  /* display: none; */
+}
+
+.hair {
+  fill: var(--hair-color);
+  /* display: none; */
+}
+
+#hair-duplicate {
+  fill: var(--hair-color);
+  display: none;
+}
+
+.body {
+  fill: var(--body-color);
+}
+
+.bra-left, .bra-right {
+  fill: var(--blue-color);
 }
 
 .sunset {
   fill: url(#red-gradient);
   transform: scale(3,-2.5) translate(-10px,147px);
-  animation: sun 10s ease 2s forwards;
+  animation: sun 12s ease 2s forwards;
 }
 
-.fifka{
+.pipe{
   fill:url(#pipe-gradient);
 }
 
