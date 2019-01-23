@@ -8,80 +8,113 @@
 }
 
 @keyframes sky {
-  0% { background: linear-gradient(0deg, rgba(220,123,132,1) 0%, rgba(46,151,183,1) 50%) no-repeat;
-    background-size: cover;}
-  50% { background: linear-gradient(0deg, rgba(220,123,132,1) 5%, rgba(46,151,183,1) 70%) no-repeat;
-    background-size: cover;}
-  55% {background: linear-gradient(0deg, rgba(220,123,132,1) 15%, rgba(46,151,183,1) 100%) no-repeat;
+  0% {
+    background: linear-gradient(0deg, rgba(220, 123, 132, 1) 0%, rgba(46, 151, 183, 1) 50%) no-repeat;
     background-size: cover;
-}
-  60% {background: linear-gradient(0deg, rgba(220,123,132,1) 25%, rgba(46,151,183,1) 100%) no-repeat;
+  }
+
+  50% {
+    background: linear-gradient(0deg, rgba(220, 123, 132, 1) 5%, rgba(46, 151, 183, 1) 70%) no-repeat;
     background-size: cover;
-}
-  65% {background: linear-gradient(0deg, rgba(220,123,132,1) 33%, rgba(46,151,183,1) 100%) no-repeat;
+  }
+
+  55% {
+    background: linear-gradient(0deg, rgba(220, 123, 132, 1) 15%, rgba(46, 151, 183, 1) 100%) no-repeat;
     background-size: cover;
-}
-  100% {background: linear-gradient(0deg, rgba(220,123,132,1) 43%, rgba(46,151,183,1) 100%) no-repeat;
-    background-size: cover;}
+  }
+
+  60% {
+    background: linear-gradient(0deg, rgba(220, 123, 132, 1) 25%, rgba(46, 151, 183, 1) 100%) no-repeat;
+    background-size: cover;
+  }
+
+  65% {
+    background: linear-gradient(0deg, rgba(220, 123, 132, 1) 33%, rgba(46, 151, 183, 1) 100%) no-repeat;
+    background-size: cover;
+  }
+
+  100% {
+    background: linear-gradient(0deg, rgba(220, 123, 132, 1) 43%, rgba(46, 151, 183, 1) 100%) no-repeat;
+    background-size: cover;
+  }
 }
 
 @keyframes smoky {
-	0% {
-		transform: translateX(0px) rotate(0deg);
-	}
-	25% {
-		transform: translateX(-1px) rotate(-0.2deg);
+  0% {
+    transform: translateX(0px) rotate(0deg);
   }
-	50% {
-		transform: translateX(0px) rotate(0.5deg);
-	}
-	75% {
-		transform: translateX(-1px) rotate(-0.2deg);
-	}
-	100% {
-		transform: translateX(0px) rotate(0.5deg);
-	}
+
+  25% {
+    transform: translateX(-1px) rotate(-0.2deg);
+  }
+
+  50% {
+    transform: translateX(0px) rotate(0.5deg);
+  }
+
+  75% {
+    transform: translateX(-1px) rotate(-0.2deg);
+  }
+
+  100% {
+    transform: translateX(0px) rotate(0.5deg);
+  }
 }
 
 @keyframes sunset {
-  0% {fill-opacity: 1;
-    transform: scale(3,-2.5) translate(-10px,147px);
+  0% {
+    fill-opacity: 1;
+    transform: scale(3, -2.5) translate(-10px, 147px);
   }
-  20% {fill-opacity: .95;
-    transform: scale(2.80,-2.4) translate(-10px,142px);
+
+  20% {
+    fill-opacity: .95;
+    transform: scale(2.80, -2.4) translate(-10px, 142px);
   }
-  40% {fill-opacity: .8;
-    transform: scale(2.60,-2.3) translate(-10px,137px);
+
+  40% {
+    fill-opacity: .8;
+    transform: scale(2.60, -2.3) translate(-10px, 137px);
   }
-  60% {fill-opacity: .7;
-    transform: scale(2.40,-2.2) translate(-10px,132px);
+
+  60% {
+    fill-opacity: .7;
+    transform: scale(2.40, -2.2) translate(-10px, 132px);
   }
-  70% {fill-opacity: .5;
-    transform: scale(2.2,-2.1) translate(-10px,125px);
+
+  70% {
+    fill-opacity: .5;
+    transform: scale(2.2, -2.1) translate(-10px, 125px);
   }
-  80% {fill-opacity: .2;
-    transform: scale(2.0,-2.0) translate(-10px,120px);
+
+  80% {
+    fill-opacity: .2;
+    transform: scale(2.0, -2.0) translate(-10px, 120px);
   }
-  100% {fill-opacity: 0;
-    transform: scale(2.0,-2.0) translate(-10px, 120px);
+
+  100% {
+    fill-opacity: 0;
+    transform: scale(2.0, -2.0) translate(-10px, 120px);
   }
 }
 
 @keyframes swing {
   0% {
-    transform: translate(0px,62px) scale(0.8) rotate(33deg);
+    transform: translate(0px, 62px) scale(0.8) rotate(33deg);
   }
+
   10% {
-    transform: translate(0px,30px) scale(0.8) rotate(33deg);
+    transform: translate(0px, 30px) scale(0.8) rotate(33deg);
   }
+
   100% {
-    transform: translate(0px,1px) scale(1) rotate(0deg);
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
   }
 }
 
 body {
-  animation: sky 12s ease-in 1s forwards ;
-  background: linear-gradient(0deg, rgba(220,123,132,1) 0%, rgba(46,151,183,1) 50%);
+  animation: sky 12s ease-in 1s forwards;
+  background: linear-gradient(0deg, rgba(220, 123, 132, 1) 0%, rgba(46, 151, 183, 1) 50%);
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
@@ -89,13 +122,15 @@ body {
   width: 100%;
 }
 
-.svg_container, svg {
+.svg_container,
+svg {
   height: 100%;
-  width: 100%; 
+  width: 100%;
   display: block;
 }
 
-rect, polygon {
+rect,
+polygon {
   width: 100%;
 }
 
@@ -124,8 +159,9 @@ rect, polygon {
 }
 
 /* svg groups */
-#lady, #swing-animation {
-  transform: translate(50%, -14.45%) scale(1.80);
+#lady,
+#swing-animation {
+  transform: translate(50%, -14.35%) scale(1.80);
 }
 
 #sun-animation {
@@ -137,23 +173,25 @@ rect, polygon {
   fill: var(--body-color);
 }
 
-.bra-left, .bra-right {
+.bra-left,
+.bra-right {
   fill: var(--blue-color);
 }
 
 /* swing */
-.arm-right, .hat {
+.arm-right,
+.hat {
   transform-origin: 80px 340px;
   animation: swing 5s ease 13s forwards;
 }
 
 .arm-right {
   fill: url(#body-gradient);
-  transform: translate(0px,62px) scale(0.8) rotate(33deg);
+  transform: translate(0px, 62px) scale(0.8) rotate(33deg);
 }
 
 .hat {
-  transform: translate(0px,105px) scale(0.8) rotate(33deg);
+  transform: translate(0px, 107px) scale(0.8) rotate(33deg);
 }
 
 .hat-bottom {
@@ -161,40 +199,36 @@ rect, polygon {
 }
 
 .hat-sun {
+  transform: scale(1,-1);
   fill: url(#red-gradient);
 }
 
 .hair {
   fill: var(--hair-color);
-  transform: translateY(1px);
+  /* transform: translateY(1px); */
 }
-
-/* #hair-duplicate {
-  fill: var(--hair-color);
-  display: none;
-} */
 
 .sunset {
   fill: url(#red-gradient);
-  transform: scale(3,-2.5) translate(-10px,147px);
+  transform: scale(3, -2.5) translate(-10px, 147px);
   animation: sunset 12s ease 2s forwards;
 }
 
-.pipe{
-  fill:url(#pipe-gradient);
+.pipe {
+  fill: url(#pipe-gradient);
 }
 
 .drink-circle-top {
-  fill:#227b99;
+  fill: #227b99;
   fill-opacity: 0.6;
 }
 
 .drink-circle-bottom {
-  opacity:1;
-  fill:url(#linearGradient5172);
-  stroke:url(#linearGradient5508);
+  opacity: 1;
+  fill: url(#linearGradient5172);
+  stroke: url(#linearGradient5508);
   stroke-width: 1.5;
-  stroke-opacity:1;
+  stroke-opacity: 1;
 }
 
 .drink {
@@ -206,18 +240,19 @@ rect, polygon {
   stroke-opacity: 0.5;
 }
 
-.smoke-big, .smoke-small {
+.smoke-big,
+.smoke-small {
   fill: var(--smoke-color);
   fill-opacity: 0.7;
   animation: smoky 20s ease infinite;
-	animation-direction: alternate;
+  animation-direction: alternate;
 }
 
 .smoke-big {
-	transform-origin: 0% 70%;
+  transform-origin: 0% 70%;
 }
 
 .smoke-small {
-	transform-origin: 0% 60%;
-	animation-delay: 1.5s;
+  transform-origin: 0% 60%;
+  animation-delay: 1.5s;
 }
