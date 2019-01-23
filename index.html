@@ -36,48 +36,45 @@
           <stop offset="40%" style="stop-color:#FEF0E8;" />
           <stop offset="100%" style="stop-color: #e9c8c2;" />
         </linearGradient>
-        
-
-        <linearGradient id="pink-gradient-drink">
-          <stop
-              id="stop5164"
-              offset="0"
-              style="stop-color:#e3a5a8;stop-opacity:1;" />
-          <stop
-              id="stop5166"
-              offset="1"
-              style="stop-color:#e3a5a8;stop-opacity:0;" />
+        <linearGradient id="drink-gradient" gradientTransform="rotate(90)" >
+            <stop offset="20%" style="stop-color:#2c95b3" />
+            <stop offset="21%" style="stop-color: #f7f7f0;" />
+            <stop offset="35%" style="stop-color: #f8ceb8;" />
+          </linearGradient>
+        <linearGradient id="shadow-gradient" gradientTransform="rotate(90)">
+          <stop offset="0.0" style="stop-color: #b07577; stop-opacity: 1.0">
+            <animate attributeName="offset" values="1.0;.7;.5;.3;.25;.2;.15;.1;.05;.0;" dur="40s" repeatCount="freeze"/>
+          </stop>
+          <stop offset="0.8" style="stop-color: #eaa7a1; stop-opacity: 0.55" />
         </linearGradient>
-
+      
+        <linearGradient id="pink-gradient-drink">
+          <stop id="stop5164" offset="0" style="stop-color:#e3a5a8; stop-opacity:1;" />
+          <stop id="stop5166" offset="1" style="stop-color:#e3a5a8; stop-opacity:0;" />
+        </linearGradient>
         <linearGradient
-            gradientTransform="translate(-7.6167929,-10.823864)"
-            gradientUnits="userSpaceOnUse"
-            y2="361.94318"
-            x2="139.10669"
-            y1="361.94318"
-            x1="111.4457"
-            id="linearGradient5172"
-            xlink:href="#pink-gradient-drink" />
-            <linearGradient
-            id="linearGradient5506">
-           <stop
-              id="stop5502"
-              offset="0"
-              style="stop-color:#fef8ed;stop-opacity:1;" />
-           <stop
-              id="stop5504"
-              offset="1"
-              style="stop-color:#fef8ed;stop-opacity:0;" />
+          gradientTransform="translate(-7.6167929,-10.823864)"
+          gradientUnits="userSpaceOnUse"
+          y2="361.94318"
+          x2="139.10669"
+          y1="361.94318"
+          x1="111.4457"
+          id="linearGradient5172"
+          xlink:href="#pink-gradient-drink" />
+
+        <linearGradient id="linearGradient5506">
+           <stop id="stop5502" offset="0" style="stop-color:#fef8ed; stop-opacity:1;" />
+           <stop id="stop5504" offset="1" style="stop-color:#fef8ed; stop-opacity:0;" />
          </linearGradient>
-            <linearGradient
-            gradientTransform="translate(-8.0176768,-10.823864)"
-            gradientUnits="userSpaceOnUse"
-            y2="361.94318"
-            x2="139.61057"
-            y1="361.94318"
-            x1="110.80047"
-            id="linearGradient5508"
-            xlink:href="#linearGradient5506" />
+        <linearGradient
+          gradientTransform="translate(-8.0176768,-10.823864)"
+          gradientUnits="userSpaceOnUse"
+          y2="361.94318"
+          x2="139.61057"
+          y1="361.94318"
+          x1="110.80047"
+          id="linearGradient5508"
+          xlink:href="#linearGradient5506" />
       </defs>
       
       <rect class="water" fill="url(#blue-gradient)" height="230" ></rect>
@@ -112,6 +109,8 @@
       </g>
 
       <rect class="floor" fill="url(#pink-gradient)" height="153" ></rect>
+      
+      <polygon class="shadow" points="615 270,690 420,174 420,340 270"></polygon>
 
       <g id="lady">
         
@@ -123,17 +122,14 @@
         <path class="bra-right"
         d="m 53.317431,313.43622 c 2.449021,-2.14781 -7.167054,5.49461 -6.013257,25.2557 0.04926,0.8437 -2.405303,-0.80177 -2.405303,-0.80177 0,0 1.106214,-22.67523 5.21149,-25.25569 4.105277,-2.58046 2.378612,1.52832 3.20707,0.80176 z"/>
 
-        <use id="hair-duplicate" xlink:href="#hair" />
+        <!-- <use id="hair-duplicate" xlink:href="#hair" /> -->
 
 
-      <ellipse 
-        class="drink-circle-top" cx="117" cy="313" rx="16" ry="2"
-        style="opacity:0.98000004;fill:#227b99;fill-opacity:1;stroke:none;stroke-width:0.16480951;stroke-opacity:1;paint-order:normal" />
+      <ellipse class="drink-circle-top" cx="117" cy="313" rx="16" ry="2" />
       <ellipse class="drink-circle-bottom"  cx="117" cy="351" rx="14" ry="4" />
-      <path class="drink"
-          id="path5534"
-          d="m 102.62626,313.8371 11.22475,16.03537 c 0,0 1.20265,5.61237 6.81502,-0.80177 5.61238,-6.41413 13.22917,-15.63447 13.22917,-15.63447 -8.09513,1.29755 -13.12114,4.12965 -31.26894,0.40087 z"
-          style="display:inline;fill:#fef823;fill-opacity:1;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path class="drink" id="path5534"
+          d="m 102.62626,313.8371 11.22475,16.03537 c 0,0 1.20265,5.61237 6.81502,-0.80177 5.61238,-6.41413 13.22917,-15.63447 13.22917,-15.63447 -8.09513,1.29755 -13.12114,4.12965 -31.26894,0.40087 z" />
+      <line class="drink-line" x1="117" y1="332" x2="117" y2="350" />
       <path class="pipe"
         d="m -144.3869,337.67022 2.26785,-0.75595 -23.13214,-18.29405 -0.60476,0.90715 -15.11905,-11.79285 c 0,0 -2.57024,-0.3024 -1.05833,1.05833 1.5119,1.3607 15.57262,11.79285 15.57262,11.79285 l -0.60476,0.90715 z" />
 

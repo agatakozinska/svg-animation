@@ -7,7 +7,7 @@
   --hair-color: #7b292f;
 }
 
-@keyframes sunset {
+@keyframes sky {
   0% { background: linear-gradient(0deg, rgba(220,123,132,1) 0%, rgba(46,151,183,1) 50%) no-repeat;
     background-size: cover;}
   50% { background: linear-gradient(0deg, rgba(220,123,132,1) 5%, rgba(46,151,183,1) 70%) no-repeat;
@@ -43,7 +43,7 @@
 	}
 }
 
-@keyframes sun {
+@keyframes sunset {
   0% {fill-opacity: 1;
     transform: scale(3,-2.5) translate(-10px,147px);
   }
@@ -60,10 +60,10 @@
     transform: scale(2.2,-2.1) translate(-10px,125px);
   }
   80% {fill-opacity: .2;
-    transform: scale(2.0,-2.0) translate(-10px,125px);
+    transform: scale(2.0,-2.0) translate(-10px,120px);
   }
   100% {fill-opacity: 0;
-    transform: scale(1.0,-2.0) translate(-10px, 125px);
+    transform: scale(2.0,-2.0) translate(-10px, 120px);
   }
 }
 
@@ -74,17 +74,15 @@
   10% {
     transform: translate(0px,30px) scale(0.8) rotate(33deg);
   }
-
-
-
-
   100% {
     transform: translate(0px,1px) scale(1) rotate(0deg);
   }
 }
 
 body {
-  animation: sunset 12s ease-in 1s forwards ;
+  animation: sky 12s ease-in 1s forwards ;
+  background: linear-gradient(0deg, rgba(220,123,132,1) 0%, rgba(46,151,183,1) 50%);
+  background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
   height: 100%;
@@ -101,23 +99,15 @@ rect, polygon {
   width: 100%;
 }
 
-.floor {
-  transform-origin: bottom left;
-  transform: translateY(82%);
-}
-
 .water {
   transform-origin: bottom left;
   transform: translateY(65.5%);
 }
 
-/* .test {
-  width: 175px;
-  height: 110px;
-  -webkit-clip-path: polygon(100% 0, 100% 34%, 35% 100%, 0% 100%);
-  clip-path: polygon(100% 0, 100% 34%, 35% 100%, 0% 100%);
-  background-image: radial-gradient(circle at bottom left, rgba(4,125,164,1) 20%, rgba(65,145,176,1) 55%, rgba(87,146,176,1) 80%, rgba(177,169,190,1) 100%)
-} */
+.floor {
+  transform-origin: bottom left;
+  transform: translateY(82%);
+}
 
 .floor-edge {
   transform: translateY(-167.3%) scale(5.3);
@@ -127,44 +117,21 @@ rect, polygon {
   fill: #FEF0E7;
 }
 
-#lady, #sun-animation, #swing-animation {
-  transform: translate(55%, -17%) scale(1.85);
+.shadow {
+  fill: url(#shadow-gradient);
+  transform-origin: bottom center;
+  transform: translate(145px, 176px) scale(0.8);
 }
 
-.arm-right {
-  fill: url(#body-gradient);
-  transform-origin: 80px 340px;
-  transform: translate(0px,62px) scale(0.8) rotate(33deg);
-  animation: swing 5s ease 10s forwards;
-  /* display: none; */
+/* svg groups */
+#lady, #swing-animation {
+  transform: translate(50%, -14.45%) scale(1.80);
 }
 
-.hat {
-  transform-origin: 80px 340px;
-  transform: translate(0px,105px) scale(0.8) rotate(33deg);
-  animation: swing 5s ease 10s forwards;
-  /* display: none; */
+#sun-animation {
+  transform: translate(50%, -17%) scale(1.85);
 }
-
-.hat-bottom {
-  fill: var(--light-pink);
-  /* display: none; */
-}
-
-.hat-sun {
-  fill: url(#red-gradient);
-  /* display: none; */
-}
-
-.hair {
-  fill: var(--hair-color);
-  /* display: none; */
-}
-
-#hair-duplicate {
-  fill: var(--hair-color);
-  display: none;
-}
+/*  */
 
 .body {
   fill: var(--body-color);
@@ -174,23 +141,69 @@ rect, polygon {
   fill: var(--blue-color);
 }
 
+/* swing */
+.arm-right, .hat {
+  transform-origin: 80px 340px;
+  animation: swing 5s ease 13s forwards;
+}
+
+.arm-right {
+  fill: url(#body-gradient);
+  transform: translate(0px,62px) scale(0.8) rotate(33deg);
+}
+
+.hat {
+  transform: translate(0px,105px) scale(0.8) rotate(33deg);
+}
+
+.hat-bottom {
+  fill: var(--light-pink);
+}
+
+.hat-sun {
+  fill: url(#red-gradient);
+}
+
+.hair {
+  fill: var(--hair-color);
+  transform: translateY(1px);
+}
+
+/* #hair-duplicate {
+  fill: var(--hair-color);
+  display: none;
+} */
+
 .sunset {
   fill: url(#red-gradient);
   transform: scale(3,-2.5) translate(-10px,147px);
-  animation: sun 12s ease 2s forwards;
+  animation: sunset 12s ease 2s forwards;
 }
 
 .pipe{
   fill:url(#pipe-gradient);
 }
 
+.drink-circle-top {
+  fill:#227b99;
+  fill-opacity: 0.6;
+}
+
 .drink-circle-bottom {
   opacity:1;
   fill:url(#linearGradient5172);
-  fill-opacity:1;
   stroke:url(#linearGradient5508);
-  stroke-width:1;
+  stroke-width: 1.5;
   stroke-opacity:1;
+}
+
+.drink {
+  fill: url(#drink-gradient);
+}
+
+.drink-line {
+  stroke: #000;
+  stroke-opacity: 0.5;
 }
 
 .smoke-big, .smoke-small {
